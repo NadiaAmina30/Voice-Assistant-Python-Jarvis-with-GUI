@@ -51,7 +51,7 @@ if 'wikipedia' in query.lower():
         print(results)
         speak(results)
     except Exception as e:
-        speak("Too many results")  
+        print(e)  
 elif 'the time' in query.lower():
     strTime = datetime.datetime.now().strftime("%H:%M:%S")
     speak(f"The time is {strTime}")                   
@@ -63,7 +63,7 @@ elif 'what is' in query.lower():
         print(results)
         speak(results)
     except Exception as e:
-        speak("Too many results")    
+        print(e)    
 elif 'what are' in query.lower():
     try:
         speak('Searching wikipedia')
@@ -72,7 +72,7 @@ elif 'what are' in query.lower():
         print(results)
         speak(results) 
     except Exception as e:
-        speak("Too many results") 
+        print(e)
 elif 'who is' in query.lower():
     try:
         speak('Searching wikipedia')
@@ -81,7 +81,7 @@ elif 'who is' in query.lower():
         print(results)
         speak(results) 
     except Exception as e:
-        speak("Too many results")               
+        print(e)               
       
 elif 'open youtube' in query.lower():
     url = "youtube.com"
